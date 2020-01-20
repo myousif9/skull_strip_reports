@@ -61,18 +61,22 @@ def pipeline_gen(beast_path,gradcorr_path,temp_path,subject):
     pipeline.run()
 
 if __name__=='__main__':
+    
+    #subject list to be populated with beast skull strip subjects
     subject_list = []
 
-    #parsing beast skull strip folder for subject list
-    beast_path = '/home/myousif/graham/scratch/DM1_correct7t/beast_v0.0.2'
-    grad_path = '/home/myousif/graham/scratch/DM1_correct7t/gradcorrect.simg'
-    temp_path = '/home/myousif/graham/scratch/skull_strip_reports'
+    # input paths
+    beast_path = '/home/myousif/graham/scratch/DM1_correct7t/beast_v0.0.2' # replace with commandline argument
+    grad_path = '/home/myousif/graham/scratch/DM1_correct7t/gradcorrect.simg' # replace with commandline argument
+    temp_path = '/home/myousif/graham/scratch/skull_strip_reports' # replace with commandline argument
+    
+    # parsing beast skull strip folder for subject list
     for sub in os.listdir(beast_path):
         if 'sub' in sub:
             subject_list.append(sub)
 
-    # for sub in subject_list:
-    #     pipeline_gen(beast_path,grad_path,temp_path,sub)
+    for sub in subject_list:
+        pipeline_gen(beast_path,grad_path,temp_path,sub)
     
     table_data = """
     <tr>
@@ -95,7 +99,7 @@ if __name__=='__main__':
         file.write('<h2> Skull Strip Reports')
         file.write('<table style="width:100%">')
         for sub in subject_list:
-            file.write(table_data.format(sub='sub-S01'))
+            file.write(table_data.format(sub=sub))
         file.write('</table>')
         file.write('</body>')
         file.write('</html>')
