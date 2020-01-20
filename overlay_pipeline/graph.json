@@ -1,0 +1,23 @@
+[
+    {
+        "group": 1,
+        "imports": [],
+        "name": "0_gradient_input",
+        "size": 1
+    },
+    {
+        "group": 1,
+        "imports": [],
+        "name": "1_beast_input",
+        "size": 1
+    },
+    {
+        "group": 1,
+        "imports": [
+            "1_beast_input",
+            "0_gradient_input"
+        ],
+        "name": "2_gen_overlay",
+        "size": 1
+    }
+]

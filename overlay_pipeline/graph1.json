@@ -1,0 +1,46 @@
+{
+    "groups": [
+        {
+            "name": "Group_00001",
+            "procs": [
+                0,
+                1,
+                2
+            ],
+            "total": 3
+        }
+    ],
+    "links": [
+        {
+            "source": 1,
+            "target": 2,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 2,
+            "value": 1
+        }
+    ],
+    "maxN": 3,
+    "nodes": [
+        {
+            "group": 1,
+            "name": "0_gradient_input",
+            "report": "/tmp/tmpum2sgdf5/overlay_pipeline/gradient_input/_report/report.rst",
+            "result": "/tmp/tmpum2sgdf5/overlay_pipeline/gradient_input/result_gradient_input.pklz"
+        },
+        {
+            "group": 1,
+            "name": "1_beast_input",
+            "report": "/tmp/tmpimj_cf5v/overlay_pipeline/beast_input/_report/report.rst",
+            "result": "/tmp/tmpimj_cf5v/overlay_pipeline/beast_input/result_beast_input.pklz"
+        },
+        {
+            "group": 1,
+            "name": "2_gen_overlay",
+            "report": "/tmp/tmp58rp6i4l/overlay_pipeline/gen_overlay/_report/report.rst",
+            "result": "/tmp/tmp58rp6i4l/overlay_pipeline/gen_overlay/result_gen_overlay.pklz"
+        }
+    ]
+}
